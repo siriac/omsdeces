@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Annexe 2</title>
+<link rel="stylesheet" type="text/css" href=""/>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body ng-app="oms" ng-controller="controller">
+<div class=" col-sm-6 col-sm-offset-5">
+<h1> Annexe 2</h1>
+</div>
+<div class=" col-sm-10 col-sm-offset-2">
+<h1> TABLEAU RECAPUTILATIF DE NOTIFICATION DES DECES METERNELS</h1>
+</div>
+			<div class="col-sm-offset-2 col-sm-10" ng-controller="getcontroller">
+	<a class="btn" title="Export Table" ng-click='csv.generate()' ng-href="{{ csv.link() }}" download="myTable.csv">
+        <i class="glyphicon glyphicon-new-window"></i> &#160;Export
+      </a>
+      <table class="table table-bordered" export-csv="csv" separator=";" ng-init="getfunction()">
+      <THEAD>
+      <tr>
+      <TH>Numero Identification</TH><TH>Region</TH><TH>District</TH><TH>Aire de Sante</TH><TH>Categorie</TH>
+      <TH>Lieu de deces</TH><TH>Date deces</TH><TH>Date notification</TH><TH>Personne qui a notifie</TH>
+      <TH>Responsable de la FOSA</TH><TH>Responsable de A.S</TH><TH>Chef de District de sante</TH>
+      <TH>Hemorragie ante-partum</TH><TH>Hemorragie du post-partum</TH><TH>Hematome retro-placentaire</TH>
+      <TH>Rupture Uterine</TH><TH>Anomalies de la coagulation en post-partum</TH><TH>pre-eclampsie</TH>
+      <TH>Eclampsie</TH><TH>Avortement septique </TH><TH>Embolies amniotique et pulmonaires</TH>
+      <TH>Maladies cardio-vasculaires</TH><TH>Paludisme</TH><TH>VIH/SIDA</TH><TH>Anemies severes</TH>
+      <TH>Autre circonstance</TH>
+      </tr>
+      </THEAD>
+      <TBODY>
+      <TR ng-repeat="cust in response">
+      <TD>{{cust.numIden}}</TD><TD>{{cust.region}}</TD><TD>{{cust.district}}</TD><TD>{{cust.aire_sante}}</TD><TD>{{cust.categorie}}</TD>
+      <TD>{{cust.lieuDeces}}</TD><TD>{{cust.dateDeces}}</TD><TD>{{cust.dateSignature}}</TD><TD>{{cust.personneNotifie}}</TD>
+      <TD>{{cust.responsableFOSA}}</TD><TD>{{cust.responsableAS}}</TD><TD>{{cust.chefDistrict}}</TD>
+      <TD >{{cust.hemorragie_ante_partum}}</TD><TD >{{cust.hemorragie_du_post_partum}}</TD><TD >{{cust.hematome_retro_plaacentaire}}</TD><TD >{{cust.rupture_uterine}}</TD><TD >{{cust.anomalie}}</TD><TD >{{cust.pre_eclampsie}}</TD><TD >{{cust.eclampsie}}</TD>
+      <TD >{{cust.avortement_septique}}</TD><TD >{{cust.embolie_amniotique}}</TD><TD >{{cust.maladie_cardio_vasculaire}}</TD><TD >{{cust.paludisme}}</TD><TD >{{cust.vihSida}}</TD><TD >{{cust.anemies_severes}}</TD><TD >{{cust.autre_circonstance}}</TD>
+      </TR>
+      </TBODY>
+        <!-- table contents -->
+      </table>
+      </div>
+<script type="text/javascript" src="angular/angular.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/app.js"></script>
+<script type="text/javascript" src="bootstrap/js/ui-bootstrap-tpls-2.5.0.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-animate.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-sanitize.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-checklist.js"></script>
+<script type="text/javascript" src="bootstrap/js/ng-table-to-csv.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-route.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/modernizr.js"></script>
+
+</body>
+</html>

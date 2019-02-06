@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body ng-app="oms" ng-controller="loginCTRL">
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Login to our site</h3>
+                            		<p>Enter your username and password to log on:</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-lock"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form"  method="get" class="login-form" ng-submit="submitForm()">
+			                    	<div class="form-group">
+			                    		<label for="form-username">Username</label>
+			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" ng-model="username">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label  for="form-password">Password</label>
+			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" ng-model="password">
+			                        </div>
+			                        <button type="submit" class="btn">Sign in!</button>
+			                    </form>
+			                    {{Message}}
+		                    </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+<script type="text/javascript" src="angular/angular.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/app.js"></script>
+<script type="text/javascript" src="bootstrap/js/ui-bootstrap-tpls-2.5.0.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-animate.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-sanitize.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-checklist.js"></script>
+<script type="text/javascript" src="bootstrap/js/ng-table-to-csv.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/angular-route.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/modernizr.js"></script>
+
+</body>
+</html>

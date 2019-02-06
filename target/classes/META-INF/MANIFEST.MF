@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: omsdeces
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Ulrich
+Implementation-Vendor-Id: org.sinares
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/omsdeces/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
